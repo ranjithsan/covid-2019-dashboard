@@ -11,9 +11,7 @@ pipeline {
 
          stage('NPM test + install') {
             steps {
-                sh 'npm set registry https://registry.npmjs.org/'
-                sh 'npm config ls'
-                sh 'npm install'
+                sh 'install react-dev-utils --save'
             }
         }
 
@@ -32,8 +30,7 @@ pipeline {
                        sshagent (credentials: ['ssh-covid-connect']) {
 
                         sh "ssh ${sshCopy} 'mkdir -p /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev'"
-                        sh "ssh ${sshCopy} 'rm -rf /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/public/*'"
-                        sh "ssh ${sshCopy} 'rm -rf /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/src/*'"
+                        sh "ssh ${sshCopy} 'rm -rf /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/*'"
                         sh "scp -r ./public ${sshCopy}:/home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/"
                         sh "scp -r ./node_modules ${sshCopy}:/home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/"
                         sh "scp -r ./package.json ${sshCopy}:/home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/"
