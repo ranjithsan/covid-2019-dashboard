@@ -8,7 +8,7 @@ ports=( ["dev"]="8087" ["prod"]="8088")
 # export ENV variables
 /bin/bash /home/$CUSTOMER/covid-2019/startups/exports.sh
 # Running the application on the host
-npm start > /home/$CUSTOMER/covid-2019/$ENV/logs/covid-2019.log 2>&1
+sudo npm start
 # Print what you've just executed (for debugging)
 echo "Executing:"
 echo "npm start > /home/$CUSTOMER/covid-2019/$ENV/logs/covid-2019.log 2>&1"
