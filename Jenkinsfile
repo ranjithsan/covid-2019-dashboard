@@ -30,6 +30,7 @@ pipeline {
                      }
                      steps {
                        sshagent (credentials: ['ssh-covid-connect']) {
+
                         sh "ssh ${sshCopy} 'mkdir -p /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev'"
                         sh "ssh ${sshCopy} 'rm -rf /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/public/*'"
                         sh "ssh ${sshCopy} 'rm -rf /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/dev/src/*'"
@@ -40,6 +41,7 @@ pipeline {
                         sh "scp -r ./startups/ ${sshCopy}:/home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/"
                         //Start Application
                         sh "ssh ${sshCopy} '/bin/bash /home/${CUSTOMER_NAME.toLowerCase()}/${PROJECT_NAME.toLowerCase()}/startups/start.sh dev ${CUSTOMER_NAME.toLowerCase()}'"
+                    
                       }
                      }
                   }
