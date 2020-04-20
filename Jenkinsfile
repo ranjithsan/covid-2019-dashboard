@@ -11,7 +11,7 @@ pipeline {
 
          stage('NPM test + install') {
             steps {
-                sh 'install react-dev-utils --save'
+                sh 'npm install'
             }
         }
 
