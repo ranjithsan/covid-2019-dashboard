@@ -158,7 +158,7 @@ class App extends Component {
     });
     cardId.map((location) => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTotals=ALL`,
+        `https://cors-covid.herokuapp.com//https://thevirustracker.com/free-api?countryTotals=ALL`,
         {
           method: "GET",
         }
@@ -181,7 +181,7 @@ class App extends Component {
   renderCharts(data) {
     data.map((location) => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=${location}`,
+        `https://cors-covid.herokuapp.com//https://thevirustracker.com/free-api?countryTimeline=${location}`,
         {
           method: "GET",
         }
@@ -2234,11 +2234,8 @@ class App extends Component {
                   fontWeight: "bold",
                   textDecoration: "none",
                 }}
-                href="https://miteshtagadiya.js.org"
-                rel="noopener noreferrer"
-                target="_blank"
               >
-                Mitesh Tagadiya
+                Ranjith Raghavan
               </a>
             </div>
           </div>
