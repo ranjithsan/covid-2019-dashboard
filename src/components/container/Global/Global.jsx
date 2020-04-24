@@ -51,13 +51,13 @@ class Global extends Component {
     });
     window.addEventListener("focus", () => {
       //this.getGlobalData();
-    //  this.getDailyData();
+      this.getDailyData();
       //this.getDeathRates();
       this.getCardsData([1]);
     });
 
   //  this.getGlobalData();
-  //  this.getDailyData();
+      this.getDailyData();
    // this.getDeathRates();
     this.getCardsData([1]);
   }
