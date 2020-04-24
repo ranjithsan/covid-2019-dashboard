@@ -15,6 +15,7 @@ import GlobalMap from "../../../components/container/Global/SubComponents/Global
 import Cards from "../../../components/container/Global/SubComponents/Cards";
 import ChartsCard from "../../../components/container/Global/SubComponents/ChartsCard";
 
+
 class Global extends Component {
   constructor(props) {
     super(props);
@@ -50,15 +51,15 @@ class Global extends Component {
       locationLoader: true,
     });
     window.addEventListener("focus", () => {
-      //this.getGlobalData();
+      this.getGlobalData();
       this.getDailyData();
-      //this.getDeathRates();
+      this.getDeathRates();
       this.getCardsData([1]);
     });
 
-  //  this.getGlobalData();
-      this.getDailyData();
-   // this.getDeathRates();
+    this.getGlobalData();
+    this.getDailyData();
+    this.getDeathRates();
     this.getCardsData([1]);
   }
 
@@ -122,11 +123,12 @@ class Global extends Component {
     });
     cardId.map((location) => {
       fetch(
-      `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
+      `https://cors-anywhere.herokuapp.com/https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
       {
       header: { "Access-Control-Allow-Origin": "*" },
       method: "GET",
       })
+
         .then((res) => res.json())
         .then((response) => {
           this.setState({
@@ -207,7 +209,7 @@ class Global extends Component {
               />
             </div>
             <div style={{ minHeight: "90vh" }}>
-        {/*     <NumberCard globalData={this.state.globalData} />*/}
+             <NumberCard globalData={this.state.globalData} />
               <NavigationBar
                 type="Global"
                 ui={this.state.ui}
