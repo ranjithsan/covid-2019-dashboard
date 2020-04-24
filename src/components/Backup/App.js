@@ -549,17 +549,7 @@ class App extends Component {
                 }}
               >
                 Covid-19 Global {this.state.width < 1024 ? "" : "Dashboard"}
-                <img
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/miteshtagadiya/Covid-19-Global-Dashboard",
-                      "_blank"
-                    )
-                  }
-                  src={Github}
-                  alt="github"
-                  style={{ height: 50, width: 50, cursor: "pointer" }}
-                />
+
               </div>
             </div>
             <div style={{ paddingTop: 15 }}>
@@ -571,7 +561,7 @@ class App extends Component {
               />
               <span style={{ fontWeight: "bold" }}>Switch</span>
               <img
-                onClick={() => this.props.history.push("/")}
+                onClick={() => this.props.history.push("https://www.covid19trac.live")}
                 src={World}
                 alt="World"
                 style={{
