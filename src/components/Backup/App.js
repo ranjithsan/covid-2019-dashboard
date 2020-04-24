@@ -561,8 +561,8 @@ class App extends Component {
               />
               <span style={{ fontWeight: "bold" }}>Switch</span>
               <img
-                onClick={() => this.props.push("https://www.covid19trac.live")}
-               // onClick={() => this.props.history.push("https://www.covid19trac.live")}
+             //   onClick={() => this.props.push("https://www.covid19trac.live")}
+                onClick={() => this.props.history.push("/")}
                 src={World}
                 alt="World"
                 style={{

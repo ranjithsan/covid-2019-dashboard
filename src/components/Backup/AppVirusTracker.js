@@ -198,7 +198,8 @@ class App extends Component {
     });
     window.addEventListener("focus", () => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?global=stats`,
+      //  `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?global=stats`,
+        `https://api.thevirustracker.com/free-api?global=stats`,
         {
           header: { "Access-Control-Allow-Origin": "*" },
           method: "GET",
@@ -234,7 +235,8 @@ class App extends Component {
       this.renderCards([1]);
     });
     fetch(
-      `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?global=stats`,
+    // `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?global=stats`,
+       `https://api.thevirustracker.com/free-api?global=stats`,
       {
         method: "GET",
       }
@@ -277,7 +279,8 @@ class App extends Component {
     });
     cardId.map((location) => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTotals=ALL`,
+     //   `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTotals=ALL`,
+          `https://api.thevirustracker.com/free-api?countryTotals=ALL`,
         {
           method: "GET",
         }
@@ -300,7 +303,8 @@ class App extends Component {
   renderCharts(data) {
     data.map((location) => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=${location}`,
+       // `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=${location}`,
+        `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
         {
           method: "GET",
         }
