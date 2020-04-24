@@ -207,7 +207,7 @@ class Global extends Component {
               />
             </div>
             <div style={{ minHeight: "90vh" }}>
-              <NumberCard globalData={this.state.globalData} />
+        {/*     <NumberCard globalData={this.state.globalData} />*/}
               <NavigationBar
                 type="Global"
                 ui={this.state.ui}
