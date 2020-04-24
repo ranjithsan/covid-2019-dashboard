@@ -50,15 +50,15 @@ class Global extends Component {
       locationLoader: true,
     });
     window.addEventListener("focus", () => {
-      this.getGlobalData();
-      this.getDailyData();
-      this.getDeathRates();
+      //this.getGlobalData();
+    //  this.getDailyData();
+      //this.getDeathRates();
       this.getCardsData([1]);
     });
 
-    this.getGlobalData();
-    this.getDailyData();
-    this.getDeathRates();
+  //  this.getGlobalData();
+  //  this.getDailyData();
+   // this.getDeathRates();
     this.getCardsData([1]);
   }
 
