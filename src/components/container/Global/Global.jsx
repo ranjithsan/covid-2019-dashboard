@@ -122,7 +122,7 @@ class Global extends Component {
     });
     cardId.map((location) => {
       fetch(
-      `https://thevirustracker.com/free-api?countryTimeline=${location}`,
+      `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
       {
       header: { "Access-Control-Allow-Origin": "*" },
       method: "GET",
@@ -145,7 +145,7 @@ class Global extends Component {
   getChartsData(data) {
     data.map((location) => {
       fetch(
-        `https://cors-proxy-pass.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=${location}`,
+        `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
         {
           method: "GET",
         }
