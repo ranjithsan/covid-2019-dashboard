@@ -158,7 +158,7 @@ class App extends Component {
     });
     cardId.map((location) => {
       fetch(
-        `https://cors-anywhere.herokuapp.com///https://thevirustracker.com/free-api?countryTotals=ALL`,
+        `https://api.thevirustracker.com/free-api?countryTotals=ALL`,
         {
           method: "GET",
         }
@@ -181,7 +181,7 @@ class App extends Component {
   renderCharts(data) {
     data.map((location) => {
       fetch(
-        `https://cors-anywhere.herokuapp.com///https://thevirustracker.com/free-api?countryTimeline=${location}`,
+        `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
         {
           method: "GET",
         }
