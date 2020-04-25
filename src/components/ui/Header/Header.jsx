@@ -14,7 +14,7 @@ const Header = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={Github} alt="github" className="github-icon" />
+          <img src={World} alt="world" className="github-icon" />
         </a>
       </div>
       <div className="Switch-dashboard">
@@ -24,13 +24,14 @@ const Header = (props) => {
           alt="India"
           className="india-icon"
         />
+        {/*
         <span style={{ fontWeight: "bold" }}>Switch</span>
         <img
           onClick={() => props.history.push("/")}
           src={World}
           alt="World"
           className="global-icon"
-        />
+        /> */}
       </div>
     </div>
   );

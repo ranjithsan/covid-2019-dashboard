@@ -548,8 +548,18 @@ class App extends Component {
                   borderBottom: "2px solid white",
                 }}
               >
-                Covid-19 Global {this.state.width < 1024 ? "" : "Dashboard"}
-
+                Covid-19 Global Ranjith1 {this.state.width < 1024 ? "" : "Dashboard"}
+                <img
+                  onClick={() =>
+                    window.open(
+                      "https://covid19trac.live",
+                      "_blank"
+                    )
+                  }
+                  src={World}
+                  alt="World"
+                  style={{ height: 50, width: 50, cursor: "pointer" }}
+                />
               </div>
             </div>
             <div style={{ paddingTop: 15 }}>
@@ -559,9 +569,9 @@ class App extends Component {
                 alt="India"
                 style={{ height: 50, width: 70, cursor: "pointer" }}
               />
-              <span style={{ fontWeight: "bold" }}>Switch</span>
+             /* <span style={{ fontWeight: "bold" }}>Switch</span>
               <img
-             //   onClick={() => this.props.push("https://www.covid19trac.live")}
+
                 onClick={() => this.props.history.push("/")}
                 src={World}
                 alt="World"
@@ -571,7 +581,7 @@ class App extends Component {
                   width: 50,
                   cursor: "pointer",
                 }}
-              />
+              /> */
             </div>
             <div style={{ minHeight: "90vh" }}>
               <div className="row" style={{ padding: "30px 0px" }}>

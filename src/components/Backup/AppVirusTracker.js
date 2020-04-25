@@ -612,16 +612,16 @@ class App extends Component {
                   borderBottom: "2px solid white",
                 }}
               >
-                Covid-19 Global {this.state.width < 1024 ? "" : "Dashboard"}
+                Covid-19 Global Ranjith3 {this.state.width < 1024 ? "" : "Dashboard"}
                 <img
                   onClick={() =>
                     window.open(
-                      "https://github.com/miteshtagadiya/Covid-19-Global-Dashboard",
+                      "https://covid19trac.live",
                       "_blank"
                     )
                   }
-                  src={Github}
-                  alt="github"
+                  src={World}
+                  alt="World"
                   style={{ height: 50, width: 50, cursor: "pointer" }}
                 />
               </div>
@@ -633,6 +633,7 @@ class App extends Component {
                 alt="India"
                 style={{ height: 50, width: 70, cursor: "pointer" }}
               />
+              /*
               <span style={{ fontWeight: "bold" }}>Switch</span>
               <img
                 onClick={() => this.props.history.push("/")}
@@ -644,7 +645,7 @@ class App extends Component {
                   width: 50,
                   cursor: "pointer",
                 }}
-              />
+              />*/
             </div>
             <div style={{ minHeight: "90vh" }}>
               <div className="row" style={{ padding: "30px 0px" }}>
@@ -1680,11 +1681,9 @@ class App extends Component {
                   fontWeight: "bold",
                   textDecoration: "none",
                 }}
-                href="https://miteshtagadiya.js.org"
-                rel="noopener noreferrer"
-                target="_blank"
+
               >
-                Mitesh Tagadiya
+                Ranjith Raghavan
               </a>
             </div>
           </div>

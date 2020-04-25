@@ -539,16 +539,16 @@ class India extends Component {
                   borderBottom: "2px solid white",
                 }}
               >
-                Covid-19 India {this.state.width < 1024 ? "" : "Dashboard"}
+                Covid-19 India Ranjith 4{this.state.width < 1024 ? "" : "Dashboard"}
                 <img
                   onClick={() =>
                     window.open(
-                      "https://github.com/miteshtagadiya/Covid-19-Global-Dashboard",
+                      "https://covid19trac.live",
                       "_blank"
                     )
                   }
-                  src={Github}
-                  alt="github"
+                  src={World}
+                  alt="world"
                   style={{ height: 50, width: 50, cursor: "pointer" }}
                 />
               </div>
@@ -561,6 +561,7 @@ class India extends Component {
                   alt="India"
                   style={{ height: 50, width: 70, cursor: "pointer" }}
                 />
+                /*
                 <span style={{ fontWeight: "bold" }}>Switch</span>
                 <img
                   onClick={() => this.props.history.push("/")}
@@ -573,6 +574,7 @@ class India extends Component {
                     cursor: "pointer",
                   }}
                 />
+                */
               </div>
             </div>
             <div style={{ minHeight: "90vh" }}>

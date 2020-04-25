@@ -65,6 +65,7 @@ class Global extends Component {
 
   getDeathRates() {
     fetch(`https://covid19-global-api.herokuapp.com/deaths-rate.json`, {
+      header: { "Access-Control-Allow-Origin": "*" },
       method: "GET",
     })
       .then((res) => res.json())
@@ -100,6 +101,7 @@ class Global extends Component {
 
   getDailyData() {
     fetch(`https://covid19.mathdro.id/api/daily`, {
+      header: { "Access-Control-Allow-Origin": "*" },
       method: "GET",
     })
       .then((res) => res.json())
@@ -114,7 +116,6 @@ class Global extends Component {
         });
       });
   }
-
   getCardsData(cardId) {
     let cards = [];
     this.setState({
@@ -123,7 +124,7 @@ class Global extends Component {
     });
     cardId.map((location) => {
       fetch(
-      `https://cors-anywhere.herokuapp.com/https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
+      `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
       {
       header: { "Access-Control-Allow-Origin": "*" },
       method: "GET",
@@ -149,6 +150,7 @@ class Global extends Component {
       fetch(
         `https://api.thevirustracker.com/free-api?countryTimeline=${location}`,
         {
+          header: { "Access-Control-Allow-Origin": "*" },
           method: "GET",
         }
       )
