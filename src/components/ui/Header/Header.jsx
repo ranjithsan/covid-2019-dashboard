@@ -11,7 +11,7 @@ const Header = (props) => {
         Covid-19 {props.dashboard} {props.width < 1024 ? "" : " Dashboard"}
         <a
           href="http://www.covid19trac.live"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
         >
           <img src={World} alt="world" className="github-icon" />
