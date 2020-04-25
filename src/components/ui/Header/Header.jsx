@@ -9,7 +9,7 @@ const Header = (props) => {
     <div>
       <div className="Header">
         Covid-19 {props.dashboard} {props.width < 1024 ? "" : " Dashboard"}
-        <a href="www.covid19trac.live">
+        <a href="http://covid19trac.live" target="_self">
           <img src={World} alt="world" className="github-icon" />
         </a>
       </div>
