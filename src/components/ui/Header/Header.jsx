@@ -24,14 +24,14 @@ const Header = (props) => {
           alt="India"
           className="india-icon"
         />
-
+        {/*
         <span style={{ fontWeight: "bold" }}>Switch</span>
         <img
           onClick={() => props.history.push("/")}
           src={World}
           alt="World"
           className="global-icon"
-        />
+        /> */}
       </div>
     </div>
   );
